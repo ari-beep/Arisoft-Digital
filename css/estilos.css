@@ -538,71 +538,128 @@ footer img {
 }
 
 /* ====== SECCIÓN CLIENTES ====== */
-
 .clientes-section {
-  padding: 60px 20px;
-  background: #442285;
+  position: relative; /* clave para que las flechas sean relativas a la sección */
+  overflow: visible;  /* permite que las flechas se vean fuera del carrusel */
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #120f2f, #2e1a63);
   text-align: center;
 }
 
 .clientes-section h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #b3e5fc;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(179,229,252,0.3);
 }
 
+/* Carrusel */
 .carousel {
   position: relative;
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
+/* Tarjetas futuristas */
 .carousel-item {
   min-width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-  background: #ffffff;
-  margin: 0 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 40px 30px;
+  background: linear-gradient(135deg, rgba(20,20,60,0.95), rgba(0,212,255,0.15));
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+  box-shadow: 0 0 15px rgba(0,212,255,0.3);
+  border: 1px solid rgba(0,212,255,0.2);
 }
 
-.carousel-item p {
-  font-size: 1rem;
-  color: #555;
+/* Tarjeta activa */
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+  border: 2px solid #00d4ff;
+  box-shadow: 0 0 35px rgba(0,212,255,0.6), 0 0 50px rgba(0,212,255,0.3);
+}
+
+/* Imagen cliente */
+.carousel-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 15px;
+  border: 2px solid #00d4ff;
+  transition: transform 0.3s ease;
 }
 
-.carousel-item h4 {
+.carousel-item.active img {
+  transform: scale(1.1);
+}
+
+/* Nombre y empresa */
+.carousel-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.carousel-item .empresa {
   font-size: 0.9rem;
-  color: #888;
+  color: #ccc;
+  margin-bottom: 10px;
 }
 
-button.prev, button.next {
-  position: absolute;
+/* Opinión */
+.carousel-item .opinion {
+  font-style: italic;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+/* Flechas flotantes a los lados de la sección */
+button.prev,
+button.next {
+  position: absolute;  /* clave: respecto a la sección */
   top: 50%;
   transform: translateY(-50%);
-  background: #6793d6;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 12px 18px;
+  cursor: pointer;
+  z-index: 50;
+  background: rgba(0,212,255,0.8);
   color: #fff;
   border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  z-index: 10;
+  box-shadow: 0 0 15px rgba(0,212,255,0.7), 0 0 25px rgba(0,212,255,0.5);
+  transition: all 0.4s ease;
 }
 
-button.prev { left: 10px; }
-button.next { right: 10px; }
+button.prev { left: -50px; }
+button.next { right: -50px; }
 
-button.prev:hover, button.next:hover {
-  background: #21226b;
+/* Hover sobre sección desplaza las flechas hacia adentro */
+.clientes-section:hover button.prev { left: 10px; }
+.clientes-section:hover button.next { right: 10px; }
+
+button.prev:hover,
+button.next:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 0 25px rgba(0,212,255,1), 0 0 40px rgba(0,212,255,0.8);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .carousel-item { padding: 30px 15px; }
+  button.prev,
+  button.next { font-size: 1.6rem; padding: 10px 14px; }
 }
 
 /* ====== SECCIÓN CONTACTO ====== */

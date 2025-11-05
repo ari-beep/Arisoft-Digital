@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//SERVICIOS
+
 document.addEventListener("DOMContentLoaded", () => {
   const elementos = document.querySelectorAll('.scroll-anim');
 
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrarElementos();
 });
 
+//CLIENTES
 const track = document.querySelector('.carousel-track');
 const items = Array.from(track.children);
 const nextButton = document.querySelector('.next');
@@ -47,7 +50,19 @@ const prevButton = document.querySelector('.prev');
 let currentIndex = 0;
 
 function updateCarousel() {
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  items.forEach((item) => {
+    item.classList.remove('active');
+    item.style.opacity = '0.6';
+    item.style.transform = 'scale(0.9)';
+  });
+
+  const currentItem = items[currentIndex];
+  currentItem.classList.add('active');
+  currentItem.style.opacity = '1';
+  currentItem.style.transform = 'scale(1)';
+
+  const offset = currentItem.offsetLeft - track.offsetWidth / 2 + currentItem.offsetWidth / 2;
+  track.style.transform = `translateX(${-offset}px)`;
 }
 
 nextButton.addEventListener('click', () => {
@@ -60,8 +75,10 @@ prevButton.addEventListener('click', () => {
   updateCarousel();
 });
 
-// Auto-slide cada 5 segundos
 setInterval(() => {
   currentIndex = (currentIndex + 1) % items.length;
   updateCarousel();
 }, 5000);
+
+window.addEventListener('load', updateCarousel);
+window.addEventListener('resize', updateCarousel);
