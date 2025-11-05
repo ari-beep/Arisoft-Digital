@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #7a1294, #00C6FF);
+    color: white;
+    overflow-x: hidden;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto con la imagen */
+  gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.logo-container h1 {
+  margin: 0; /* Evita el margen por defecto del h1 */
+  font-size: 1rem; /* Ajusta el tamaño si quieres */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(52, 5, 66, 0.884);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 20px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.4s;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    color: #3b0553fd;
+    background-color: #c993df;
+}
+
+
+.menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background: white;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* Animación al activarse */
+.menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+
+  .nav-enlaces {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    flex-direction: column;
+    background-color: #5f0e77;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-enlaces a {
+    padding: 15px;
+    border-top: 1px solid white;
+  }
+
+  .nav-enlaces.activo {
+    display: flex;
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .nav-contenedor {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+}
+.sobre-nosotros {
+  min-height: 100vh; /* ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #7F00FF, #00CFFF); /* morado a celeste */
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.sobre-nosotros .contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sobre-nosotros h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 60px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.sobre-nosotros .mis-vis {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sobre-nosotros .mis-vis div {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(255,255,255,0.1); /* caja semi-transparente */
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sobre-nosotros .mis-vis div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+.sobre-nosotros h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sobre-nosotros p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sobre-nosotros h2 {
+    font-size: 32px;
+  }
+  .sobre-nosotros .mis-vis {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+footer {
+    text-align: center;
+    background-color: #21003b;
+    color: #b984d8;
+    padding: 50px 10px;
+    font-size: 15px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #f3acfa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+}
