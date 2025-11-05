@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AriSoft Digital</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+  <img src="img/ari.png" alt="AriSoft Digital" height="50px" width="40px" />
+  <h1>AriSoft Digital</h1>
+</div>
+      <nav>
+        <div class="nav-contenedor">
+        <button class="menu" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-enlaces" id="navEnlaces">
+          <a href="#inicio">Inicio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#opiniones">Opiniones</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio">
+        <video autoplay muted loop id="video-fondo">
+          <source
+            src="videos/PixVerse_V5_Image_Text_540P_Cinematic_futurist (1).mp4"
+            type="video/mp4"
+          />
+          Tu navegador no soporta video.
+        </video>
+        <div class="contenido-inicio">
+          <h2>Impulsa tu negocio con una página web profesional</h2>
+          <p>
+            En <strong>AriSoft Digital</strong> ayudamos a pequeños negocios a
+            destacar en Internet con diseños modernos, funcionales y atractivos.
+          </p>
+          <a href="#servicios" class="boton">Ver servicios</a>
+        </div>
+      </section>
+
+      <section class="sobre-nosotros">
+  <div class="contenido">
+    <div class="texto">
+      <h2>¿Por qué elegir <span>AriSoft Digital</span>?</h2>
+      <p>
+        En AriSoft Digital desarrollamos sitios web modernos, rápidos y adaptables
+        a cualquier dispositivo. Nuestro objetivo es ayudarte a destacar en internet
+        con un diseño profesional, funcional y totalmente personalizado.
+      </p>
+      <ul>
+        <li>Diseños responsivos para celulares, tablets y computadoras</li>
+        <li>Optimización para buscadores (SEO)</li>
+        <li>Atención personalizada y soporte técnico</li>
+      </ul>
+      <a href="#contacto" class="boton">Conócenos más</a>
+    </div>
+    <div class="imagen">
+      <img src="https://uploads-ssl.webflow.com/5af49de0dbb1e3637f2d8886/5b10d0ee7f483cdf4e9ca8f8_img-top.png" alt="Diseño web responsivo">
+    </div>
+  </div>
+</section>
+
+ <!-- SERVICIOS -->
+
+   <section class="servicios" id="servicios">
+  <h2>Mis <span>Servicios</span></h2>
+  <p class="subtitulo">Diseños modernos, rápidos y adaptados a tus necesidades</p>
+
+  <div class="servicios-contenedor">
+    <!-- Tarjeta 1 -->
+    <div class="servicio-card scroll-anim">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" alt="Diseño web">
+      <h3>Diseño Web Profesional</h3>
+      <p>Transformo ideas en sitios web atractivos, funcionales y adaptables a todos los dispositivos.</p>
+      <ul>
+        <li>Diseños personalizados</li>
+        <li>Adaptados a móviles y tablets</li>
+        <li>Optimización SEO básica</li>
+      </ul>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="servicio-card scroll-anim">
+      <img src="https://cdn-icons-png.flaticon.com/512/9446/9446988.png" alt="Invitaciones digitales">
+      <h3>Invitaciones Digitales</h3>
+      <p>Crea invitaciones únicas e interactivas para tus eventos con estilo y personalidad.</p>
+      <ul>
+        <li>Diseños personalizados</li>
+        <li>Animaciones y música</li>
+        <li>Fáciles de compartir</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="proyectos" id="proyectos">
+  <h2 class="titulo">Nuestros Proyectos</h2>
+  <p class="subtitulo">Algunos de los trabajos que hemos desarrollado para nuestros clientes</p>
+
+  <div class="contenedor-proyectos">
+    <div class="tarjeta-proyecto">
+      <img src="img/BannerSalon.jpeg" alt="Jardín de Eventos">
+      <div class="info-proyecto">
+        <h3>Jardín de Eventos</h3>
+        <p>Diseño web rústico, moderno y elegante con sistema de reservas online.</p>
+        <a href=" https://ari-beep.github.io/Jard-n-De-Eventos/" class="btn-ver">Ver proyecto</a>
+      </div>
+    </div>
+
+    <div class="tarjeta-proyecto">
+      <img src="img/banner.png" alt="Aromeli">
+      <div class="info-proyecto">
+        <h3>Aromeli</h3>
+        <p>Páginas personalizadas para eventos con animaciones y música.</p>
+        <a href=" https://ari-beep.github.io/Arom-li/" target="_blank" class="btn-ver">Ver proyecto</a>
+      </div>
+    </div>
+
+    <div class="tarjeta-proyecto">
+      <img src="img/invi.png" alt="Invitaciones Digitales">
+      <div class="info-proyecto">
+        <h3>Invitaciones Digitales</h3>
+        <p>Páginas personalizadas para eventos con animaciones y música.</p>
+        <a href="https://ari-beep.github.io/invitacion.github.io/" target="_blank" class="btn-ver">Ver proyecto</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="clientes" class="clientes-section">
+  <h2>Opiniones de nuestros clientes</h2>
+  <div class="carousel">
+    <button class="prev">&#10094;</button>
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <p>"Excelente servicio, mi página web quedó espectacular y muy rápida."</p>
+        <h4>- Ana P., Jardín de Eventos</h4>
+      </div>
+      <div class="carousel-item">
+        <p>"Profesionales y creativos, recomendados 100%."</p>
+        <h4>- Carlos M., Café Central</h4>
+      </div>
+      <div class="carousel-item">
+        <p>"Muy atentos y cumplidos con los plazos, la comunicación excelente."</p>
+        <h4>- Laura R., Boutique Luz</h4>
+      </div>
+      <!-- Agrega más clientes aquí -->
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+    <section id="contactanos">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Contáctanos</h2>
+      <p>Estamos listos para ayudarte. ¡Escríbenos!</p>
+      <div class="socials">
+        <a href="https://wa.me/68533239" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com/ariana_v141?igsh=MWljeDJhdXU1b2Eyag==" target="_blank">Instagram</a>
+        <a href="mailto:arianaemilyv12@gmail.com">Correo</a>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+
+    </main>
+    <footer>
+      <p><strong>AriSoft Digital</strong></p>
+      <p>Digitaliza tu negocio</p>
+      <p>© 2025 AriSoft Digital. Todos los derechos reservados.</p>
+      <p>
+        Diseñado por: <br />
+        <a href="/index.html" target="_blank" class="arisoft-enlace">AriSoft</a>
+      </p>
+      <p>
+        <a href="https://facebook.com/AriSoft" target="_blank"
+          ><img src="img/facebook2.png" alt="facebook"
+        /></a>
+        <a href="https://instagram.com/AriSoft" target="_blank"
+          ><img src="img/instagram2.png" alt=""
+        /></a>
+        <a href="https://www.tiktok.com/@AriSoft" target="_blank"
+          ><img src="img/tiktok2.png" alt=""
+        /></a>
+        <a href="https://wa.me/59168533239" target="_blank"
+          ><img src="img/whatsapp2.png" alt=""
+        /></a>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
